@@ -1,20 +1,14 @@
-//
-//  KGC_MUSICApp.swift
-//  KGC MUSIC
-//
-//  Created by kimgyeoll on 3/8/25.
-//
-
 import SwiftUI
 
 @main
-struct KGC_MUSICApp: App {
-    let persistenceController = PersistenceController.shared
-
+struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    // 앱 초기 설정 가능
+                    print("앱이 실행됨!")
+                }
         }
     }
 }
